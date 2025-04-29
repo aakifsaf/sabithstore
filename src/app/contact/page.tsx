@@ -1,15 +1,26 @@
 import React from "react";
 import Image from "next/image";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-[url('/ai-generated-networking-building-business-background-photo.jpg')] bg-cover bg-center text-white py-20 text-center relative">
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <section className="relative text-white py-20 text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage: "url('/contact-us-banner-call-center-600nw-2071411403.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter: "blur(2px)"
+            }}
+          ></div>
+        </div>
         <div className="relative z-10">
           <h1 className="text-5xl font-extrabold">Contact Us</h1>
         </div>
-      </header>
+      </section>
       <main className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Get in Touch</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -49,15 +60,45 @@ const Contact = () => {
             </button>
           </form>
           <div className="bg-white shadow-lg rounded-lg p-8 flex items-center justify-center">
-            <Image src="/globe.svg" alt="Map" width={300} height={300} className="rounded-lg" />
+            <Image src="/map.jpg" alt="Map" width={300} height={300} className="rounded-lg" />
           </div>
         </div>
       </main>
-      <footer className="bg-gray-900 text-white py-6">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2025 Sabith Grocery Store. All rights reserved.</p>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h3 className="text-4xl font-bold text-center mb-12 text-gray-800">Frequently Asked Questions</h3>
+          <div className="space-y-8">
+            <div>
+              <h4 className="text-xl font-bold mb-2">What are your delivery hours?</h4>
+              <p className="text-gray-600">We deliver from 8 AM to 8 PM, Monday to Saturday.</p>
+            </div>
+            <div>
+              <h4 className="text-xl font-bold mb-2">Do you offer same-day delivery?</h4>
+              <p className="text-gray-600">Yes, we offer same-day delivery for orders placed before 12 PM.</p>
+            </div>
+            <div>
+              <h4 className="text-xl font-bold mb-2">What payment methods do you accept?</h4>
+              <p className="text-gray-600">We accept credit cards, debit cards, and online payment options.</p>
+            </div>
+          </div>
         </div>
-      </footer>
+      </section>
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h3 className="text-4xl font-bold text-center mb-12 text-gray-800">Follow Us</h3>
+          <div className="flex justify-center space-x-8">
+            <a href="#" className="text-blue-600 hover:text-blue-800">
+              <FaFacebook className="text-6xl" />
+            </a>
+            <a href="#" className="text-blue-600 hover:text-blue-800">
+              <FaTwitter className="text-6xl" />
+            </a>
+            <a href="#" className="text-blue-600 hover:text-blue-800">
+              <FaInstagram className="text-6xl" />
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
